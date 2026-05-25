@@ -1,1 +1,3 @@
 /build
+# Ignorer la clé de configuration privée Firebase
+google-services.json
