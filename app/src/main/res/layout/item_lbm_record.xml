@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:strokeColor="#E0E0E0"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:id="@+id/tvItemLbmValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="54.20 kg"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#1976D2"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/tvItemStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✅ Normal"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvItemDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Poids: 70kg | Taille: 175cm | ♂ Homme"
+                android:textSize="13sp"
+                android:textColor="#616161"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/tvItemDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16/05/2026 à 22:15"
+                android:textSize="11sp"
+                android:textColor="#9E9E9E" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnDeleteItem"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="#D32F2F"
+            android:contentDescription="Supprimer l'enregistrement"
+            android:padding="8dp" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

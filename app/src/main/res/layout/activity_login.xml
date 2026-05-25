@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="64dp"
+        android:paddingBottom="40dp">
+
+        <!-- ══ ICÔNE / LOGO ════════════════════════════════════ -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/driss1"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            app:shapeAppearanceOverlay="@style/CircleImage"/>
+
+        <!-- ══ TITRE PRINCIPAL ═════════════════════════════════ -->
+        <TextView
+            android:id="@+id/tvAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LeanMass"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:letterSpacing="0.05"
+            android:layout_marginBottom="6dp" />
+
+        <!-- ══ SOUS-TITRE ══════════════════════════════════════ -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculateur de masse maigre"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:letterSpacing="0.02"
+            android:layout_marginBottom="48dp" />
+
+        <!-- ══ CARD FORMULAIRE ═════════════════════════════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#E0E0E0"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- ── Label Email ──────────────────────────── -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adresse email"
+                    android:textSize="12sp"
+                    android:textColor="#424242"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    android:layout_marginBottom="6dp" />
+
+                <!-- ── Champ Email ──────────────────────────── -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilEmail"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:boxStrokeColor="#1976D2"
+                    app:hintEnabled="false"
+                    app:startIconDrawable="@android:drawable/ic_dialog_email"
+                    app:startIconTint="#1976D2">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="exemple@email.com"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:textSize="15sp"
+                        android:textColor="#212121"
+                        android:textColorHint="#BDBDBD"
+                        android:imeOptions="actionNext" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- ── Label Mot de passe ───────────────────── -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mot de passe"
+                    android:textSize="12sp"
+                    android:textColor="#424242"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    android:layout_marginBottom="6dp" />
+
+                <!-- ── Champ Mot de passe ───────────────────── -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPassword"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:boxStrokeColor="#1976D2"
+                    app:hintEnabled="false"
+                    app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
+                    app:startIconTint="#1976D2"
+                    app:passwordToggleEnabled="true"
+                    app:endIconMode="password_toggle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Minimum 6 caractères"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:textSize="15sp"
+                        android:textColor="#212121"
+                        android:textColorHint="#BDBDBD"
+                        android:imeOptions="actionDone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ══ PROGRESS BAR (masquée par défaut) ══════════════ -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            android:indeterminateTint="#1976D2" />
+
+        <!-- ══ BOUTON SE CONNECTER ═════════════════════════════ -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="SE CONNECTER"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="16dp"
+            app:cornerRadius="12dp"
+            app:backgroundTint="#1976D2"
+            android:textColor="@android:color/white" />
+
+        <!-- ══ SÉPARATEUR ══════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  ou  "
+                android:textColor="#BDBDBD"
+                android:textSize="13sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0" />
+
+        </LinearLayout>
+
+        <!-- ══ LIEN VERS INSCRIPTION ═══════════════════════════ -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pas encore de compte ? "
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvGoToRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S'inscrire"
+                android:textColor="#1976D2"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
